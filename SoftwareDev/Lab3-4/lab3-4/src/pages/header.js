@@ -12,40 +12,40 @@ export default function Header({authorized}) {
                     </Menu.Item>
                     {authorized ?
                         <Menu.Item key="user">
+                            <Link to={'/user'}/>
                             Пользователь
                         </Menu.Item> : (
                             <>
                                 <Menu.Item key="registration">
+                                    <Link to={'/signup'}/>
                                     Зарегистрироваться
                                 </Menu.Item>
                                 <Menu.Item key="signin">
+                                    <Link to={'/signin'}/>
                                     Авторизоваться
                                 </Menu.Item>
                             </>)}
                     <Menu.SubMenu title="Книги" key="catalog">
                         <Menu.Item key="books">
+                            <Link to={'/books'}/>
                             Каталог
                         </Menu.Item>
                         <Menu.Item key="search">
+                            <Link to={'/search'}/>
                             Расширенный поиск
                         </Menu.Item>
                         <Menu.Item key="authors">
+                            <Link to={'/authors'}/>
                             Список авторов
                         </Menu.Item>
                     </Menu.SubMenu>
                     {authorized &&
                         <Menu.Item key="booked">
+                            <Link to={'/booked'}/>
                             Брони
                         </Menu.Item>}
                 </Menu>
             </nav>
-            {/*<nav>*/}
-            {/*    <ul>*/}
-            {/*        <li><Link to='/'>Home</Link></li>*/}
-            {/*        /!*<li><Link to='/roster'>Roster</Link></li>*!/*/}
-            {/*        /!*<li><Link to='/schedule'>Schedule</Link></li>*!/*/}
-            {/*    </ul>*/}
-            {/*</nav>*/}
         </header>
     )
 }
