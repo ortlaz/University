@@ -51,14 +51,24 @@ export default function AuthorList({authorized, setAuthorized}) {
     ];
     return (
         <div>
-            <p className="pDivider" style={{ marginBottom: 5 }}>
+            <p className="pDivider" style={{ marginBottom: 20 }}>
                 СПИСОК АВТОРОВ
             </p>
-            <Form layout='vertical'>
+            <Form>
                 <Row>
-                    <Col xl={24} md={24} sm={24} xs={24}>
+                    <Col xl={16} md={14} sm={24} xs={24}>
                         <Form.Item label="Поиск по имени автора">
                             <Input/>
+                        </Form.Item>
+                    </Col>
+                    <Col xl={{span: 3, offset: 1}} md={{span: 4, offset: 1}} sm={24} xs={24}>
+                        <Form.Item label="">
+                            <Button ghost type="primary" style={{width: '100%'}}>Сформировать</Button>
+                        </Form.Item>
+                    </Col>
+                    <Col xl={{span: 3, offset: 1}} md={{span: 4, offset: 1}} sm={24} xs={24}>
+                        <Form.Item label="">
+                            <Button danger ghost style={{width: '100%'}}>Очистить</Button>
                         </Form.Item>
                     </Col>
                 </Row>
