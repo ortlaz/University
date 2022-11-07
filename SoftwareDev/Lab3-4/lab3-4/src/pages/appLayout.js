@@ -18,8 +18,8 @@ export default function AppLayout() {
         <Layout style={{minHeight: '100.1vh'}}>
             <BrowserRouter>
                 <Header authorized={authorized}/>
-                <Content>
-                    <Main/>
+                <Content style={{margin: '2% 10%'}}>
+                    <Main authorized={authorized} setAuthorized={setAuthorized}/>
                     {/*{children}*/}
                 </Content>
             </BrowserRouter>
