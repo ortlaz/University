@@ -51,14 +51,19 @@ export default function BookedBookFilters() {
                             <RangePicker style={{width: '100%'}}/>
                         </Form.Item>
                     </Col>
-                    <Col xl={12} md={12} sm={24} xs={24}>
+                    <Col xl={8} md={8} sm={24} xs={24}>
                         <Form.Item label="">
                             <Button ghost type="primary" style={{width: '100%'}}>Сформировать</Button>
                         </Form.Item>
                     </Col>
-                    <Col xl={{span: 11, offset: 1}} md={{span: 11, offset: 1}} sm={24} xs={24}>
+                    <Col xl={{span: 7, offset: 1}} md={{span: 7, offset: 1}} sm={24} xs={24}>
                         <Form.Item label="">
                             <Button danger ghost style={{width: '100%'}}>Очистить</Button>
+                        </Form.Item>
+                    </Col>
+                    <Col xl={{span: 7, offset: 1}} md={{span: 7, offset: 1}} sm={24} xs={24}>
+                        <Form.Item label="">
+                            <Button style={{width: '100%'}}>Создать</Button>
                         </Form.Item>
                     </Col>
                 </Row>

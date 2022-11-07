@@ -5,8 +5,6 @@ import {Link} from "react-router-dom";
 
 export default function AuthorList({authorized, setAuthorized}) {
 
-    useEffect(() => setAuthorized(true));
-
     const dataSource = [
         {key: 1, name: 'Джером Сэлинджер'},
         {key: 2, name: 'Джером Сэлинджер'}
@@ -51,12 +49,12 @@ export default function AuthorList({authorized, setAuthorized}) {
     ];
     return (
         <div>
-            <p className="pDivider" style={{ marginBottom: 20 }}>
+            <p className="pDivider" style={{marginBottom: 20}}>
                 СПИСОК АВТОРОВ
             </p>
             <Form>
                 <Row>
-                    <Col xl={16} md={14} sm={24} xs={24}>
+                    <Col xl={authorized? 12: 16} md={authorized? 9: 14} sm={24} xs={24}>
                         <Form.Item label="Поиск по имени автора">
                             <Input/>
                         </Form.Item>
@@ -71,6 +69,14 @@ export default function AuthorList({authorized, setAuthorized}) {
                             <Button danger ghost style={{width: '100%'}}>Очистить</Button>
                         </Form.Item>
                     </Col>
+                    {authorized && (
+                        <Col xl={{span: 3, offset: 1}} md={{span: 4, offset: 1}} sm={24} xs={24}>
+                            <Form.Item label="">
+                                <Button style={{width: '100%'}}>Создать</Button>
+                            </Form.Item>
+                        </Col>
+                    )}
+
                 </Row>
             </Form>
             <Table columns={columns} dataSource={dataSource}/>

@@ -74,10 +74,10 @@ export default function BookList({authorized, setAuthorized}) {
     ];
     return (
         <div>
-            <p className="pDivider" style={{ marginBottom: 5 }}>
+            <p className="pDivider" style={{marginBottom: 25}}>
                 КНИЖНЫЙ КАТАЛОГ
             </p>
-            <BookListFilters/>
+            {authorized && (<BookListFilters/>)}
             <Table columns={columns} dataSource={dataSource}/>
         </div>
     )
