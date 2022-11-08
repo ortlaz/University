@@ -18,7 +18,7 @@ export default function BookList({authorized, setAuthorized}) {
                         <Menu.Item key="1">
                             <Link
                                 className="linkIcon"
-                                to={'/oneBook'}
+                                to={'/book-card'}
                                 target={'_blank'}
                             >
                                 Просмотреть
