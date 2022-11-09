@@ -1,10 +1,11 @@
 import React from "react";
 import {Button, Col, DatePicker, Form, Input, Row, Select} from "antd";
+import {useNavigate} from "react-router-dom";
 
 const {RangePicker} = DatePicker;
 
 export default function BookedBookFilters() {
-
+    const history = useNavigate();
     return (
         <div>
             <Form layout='vertical'>
@@ -63,7 +64,7 @@ export default function BookedBookFilters() {
                     </Col>
                     <Col xl={{span: 7, offset: 1}} md={{span: 7, offset: 1}} sm={24} xs={24}>
                         <Form.Item label="">
-                            <Button style={{width: '100%'}}>Создать</Button>
+                            <Button style={{width: '100%'}} onClick={() => history('/booked-book')}>Создать</Button>
                         </Form.Item>
                     </Col>
                 </Row>

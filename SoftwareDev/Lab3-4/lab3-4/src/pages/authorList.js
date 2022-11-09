@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import {Button, Col, Dropdown, Form, Input, Menu, Row, Switch, Table} from "antd";
 import {UnorderedListOutlined} from "@ant-design/icons";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function AuthorList({authorized, setAuthorized}) {
-
+    const history = useNavigate();
     const dataSource = [
         {key: 1, name: 'Джером Сэлинджер'},
         {key: 2, name: 'Джером Сэлинджер'}
@@ -17,7 +17,7 @@ export default function AuthorList({authorized, setAuthorized}) {
                         <Menu.Item key="1">
                             <Link
                                 className="linkIcon"
-                                to={'/oneBook'}
+                                to={'/author-card'}
                                 target={'_blank'}
                             >
                                 Просмотреть
@@ -72,7 +72,7 @@ export default function AuthorList({authorized, setAuthorized}) {
                     {authorized && (
                         <Col xl={{span: 3, offset: 1}} md={{span: 4, offset: 1}} sm={24} xs={24}>
                             <Form.Item label="">
-                                <Button style={{width: '100%'}}>Создать</Button>
+                                <Button style={{width: '100%'}}  onClick={() => history('/author-card')}>Создать</Button>
                             </Form.Item>
                         </Col>
                     )}

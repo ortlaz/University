@@ -9,6 +9,8 @@ import BookedBooksList from "./bookedBooksList";
 import SignUp from "./signUp";
 import SignIn from "./signIn";
 import BookCard from "./bookCard";
+import AuthorCard from "./authorCard";
+import BookedBookCard from "./bookedBookCard";
 
 export default function Main({authorized, setAuthorized}) {
     return (
@@ -23,6 +25,8 @@ export default function Main({authorized, setAuthorized}) {
                 <Route path='/signup' element={<SignUp setAuthorized={setAuthorized}/>}/>
                 <Route path='/signin' element={<SignIn setAuthorized={setAuthorized}/>}/>
                 <Route path='/book-card' element={<BookCard setAuthorized={setAuthorized}/>}/>
+                <Route path='/author-card' element={<AuthorCard setAuthorized={setAuthorized}/>}/>
+                <Route path='/booked-book' element={<BookedBookCard setAuthorized={setAuthorized}/>}/>
             </Routes>
         </main>
     )

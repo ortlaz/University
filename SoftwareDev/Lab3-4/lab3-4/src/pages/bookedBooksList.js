@@ -30,7 +30,7 @@ export default function BookedBooksList({setAuthorized}) {
                     <Menu.Item key="1">
                         <Link
                             className="linkIcon"
-                            to={'/oneBook'}
+                            to={'/booked-book'}
                             target={'_blank'}
                         >
                             Просмотреть
