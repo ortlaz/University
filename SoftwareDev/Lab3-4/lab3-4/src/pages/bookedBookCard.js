@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Avatar, Button, Col, Form, Image, Input, Row, Select} from "antd";
+import {Avatar, Button, Col, DatePicker, Form, Image, Input, Row, Select} from "antd";
 import {UserOutlined, SettingOutlined} from "@ant-design/icons"
 
 export default function BookedBookCard({setAuthorized, forEdit=false}) {
@@ -28,6 +28,13 @@ export default function BookedBookCard({setAuthorized, forEdit=false}) {
                                     label: 'Рэй Бредбери',
                                 },
                             ]}/>
+                        </Form.Item>
+                    </Col>
+                </Row>
+                <Row align='center'>
+                    <Col xl={12} md={12} sm={24} xs={24}>
+                        <Form.Item label="Дата брони">
+                            <DatePicker  style={{width: "100%"}}/>
                         </Form.Item>
                     </Col>
                 </Row>

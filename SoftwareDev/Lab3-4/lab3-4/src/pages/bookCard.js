@@ -1,6 +1,9 @@
 import React, {useEffect} from "react";
-import {Avatar, Button, Col, Form, Image, Row, Select} from "antd";
+import {Avatar, Button, Col, DatePicker, Form, Image, Row, Select} from "antd";
 import {UserOutlined, SettingOutlined} from "@ant-design/icons"
+import {Input} from "antd/es";
+
+const {RangePicker} = DatePicker;
 
 export default function BookCard({setAuthorized, forEdit=false}) {
     useEffect(() => setAuthorized(true));
@@ -17,6 +20,13 @@ export default function BookCard({setAuthorized, forEdit=false}) {
                 {/*{forEdit && (*/}
                     <Row align='center'>
                     <Col xl={12} md={12} sm={24} xs={24}>
+                        <Form.Item label="Название">
+                          <Input/>
+                        </Form.Item>
+                    </Col>
+                    </Row>
+                <Row align='center'>
+                    <Col xl={12} md={12} sm={24} xs={24}>
                         <Form.Item label="Автор">
                             <Select options={[
                                 {
@@ -28,6 +38,20 @@ export default function BookCard({setAuthorized, forEdit=false}) {
                                     label: 'Рэй Бредбери',
                                 },
                             ]}/>
+                        </Form.Item>
+                    </Col>
+                    </Row>
+                <Row align='center'>
+                    <Col xl={12} md={12} sm={24} xs={24}>
+                        <Form.Item label="Год издания">
+                            <DatePicker picker="year" style={{width: "100%"}}/>
+                        </Form.Item>
+                    </Col>
+                    </Row>
+                <Row align='center'>
+                    <Col xl={12} md={12} sm={24} xs={24}>
+                        <Form.Item label="Год поступления">
+                            <DatePicker picker="year" style={{width: "100%"}}/>
                         </Form.Item>
                     </Col>
                     </Row>
